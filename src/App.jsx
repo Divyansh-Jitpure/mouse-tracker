@@ -1,22 +1,12 @@
 import React from "react";
 import "./App.css";
-import CursorTracker from "./CursorTracker";
+import HoverComp from "./components/HoverComp";
 
 function App() {
   return (
-    <div className="flex gap-3">
-      <div className="bg-slate-400 h-[300px] w-[400px] group">
-        <h2 className="text-center text-2xl font-bold">Portfolio</h2>
-        <div className="group-hover:block hidden">
-          <CursorTracker src="port.png" prevSize={300} yOffset={150} />
-        </div>
-      </div>
-      <div className="bg-slate-400 h-[300px] w-[400px] group">
-        <h2 className="text-center text-2xl font-bold">EditR</h2>
-        <div className="group-hover:block hidden">
-          <CursorTracker src="editr.png" prevSize={300} yOffset={180} />
-        </div>
-      </div>
+    <div className="flex gap-5 justify-center items-center h-screen">
+      <HoverComp src="port.png" y={65} txt="Portfolio" />
+      <HoverComp src="editr.png" y={75} txt="EditR" />
     </div>
   );
 }
